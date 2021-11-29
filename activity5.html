@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="css/activity5.css">
+
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo"><img class="Logo" src="img/logo.png"></a>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+                        <li class="nav__item"><a href="activities.html" class="nav__link">Activities</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+                <h1>Memory Game</h1>
+    
+            <div class="score-panel">
+                <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+    
+                <span class="moves">0</span> Move(s)
+    
+                <div class="timer">
+                </div>
+    
+                <div class="restart" onclick=startGame()>
+                    <i class="fa fa-repeat"></i>
+                </div>
+            </div>
+    
+            <ul class="deck" id="card-deck">
+                <li class="card" type="diamond">
+                    <i class="fa fa-diamond"></i>
+                </li>
+                <li class="card" type="plane">
+                    <i class="fa fa-paper-plane-o"></i>
+                </li>
+                <li class="card match" type="anchor">
+                    <i class="fa fa-anchor"></i>
+                </li>
+                <li class="card" type="bolt" >
+                    <i class="fa fa-bolt"></i>
+                </li>
+                <li class="card" type="cube">
+                    <i class="fa fa-cube"></i>
+                </li>
+                <li class="card match" type="anchor">
+                    <i class="fa fa-anchor"></i>
+                </li>
+                <li class="card" type="leaf">
+                    <i class="fa fa-leaf"></i>
+                </li>
+                <li class="card" type="bicycle">
+                    <i class="fa fa-bicycle"></i>
+                </li>
+                <li class="card" type="diamond">
+                    <i class="fa fa-diamond"></i>
+                </li>
+                <li class="card" type="bomb">
+                    <i class="fa fa-bomb"></i>
+                </li>
+                <li class="card" type="leaf">
+                    <i class="fa fa-leaf"></i>
+                </li>
+                <li class="card" type="bomb">
+                    <i class="fa fa-bomb"></i>
+                </li>
+                <li class="card open show" type="bolt">
+                    <i class="fa fa-bolt"></i>
+                </li>
+                <li class="card" type="bicycle">
+                    <i class="fa fa-bicycle"></i>
+                </li>
+                <li class="card" type="plane">
+                    <i class="fa fa-paper-plane-o"></i>
+                </li>
+                <li class="card" type="cube">
+                    <i class="fa fa-cube"></i>
+                </li>
+            </ul>
+    
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Congratulations 🎉</h2>
+                    <a class="close" href=# >×</a>
+                    <div class="content-1">
+                        Congratulations you're a winner 🎉🎉
+                    </div>
+                    <div class="content-2">
+                        <p>You made <span id=finalMove> </span> moves </p>
+                        <p>in <span id=totalTime> </span> </p>
+                        <p>Rating:  <span id=starRating></span></p>
+                    </div>
+                    <button id="play-again"onclick="playAgain()">
+                        Play again 😄</a>
+                    </button>
+                </div>
+            </div>
+    
+        </div>
+        <!--===== MAIN JS =====-->
+        <script src="js/activity5.js"></script>
+
+    </body>
+</html>
+

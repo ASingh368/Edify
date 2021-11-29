@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =====BOX ICONS===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/activity6.css" />
+  </head>
+     <!--===== HEADER =====-->
+     <header class="l-header">
+      <nav class="nav bd-grid">
+          <div>
+              <a href="#" class="nav__logo"><img class="Logo" src="img/logo.png"></a>
+          </div>
+          
+          <div class="nav__toggle" id="nav-toggle">
+              <i class='bx bx-menu'></i>
+          </div>
+
+          <div class="nav__menu" id="nav-menu">
+              <div class="nav__close" id="nav-close">
+                  <i class='bx bx-x'></i>
+              </div>
+
+              <ul class="nav__list">
+                  <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                  <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                  <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+                  <li class="nav__item"><a href="activities.html" class="nav__link">Activities</a></li>
+              </ul>
+          </div>
+      </nav>
+  </header>
+  <body>
+
+    <div class="activity_title">
+        <h1>EMOTION AWARENESS</h1>
+    </div>
+
+    <!-- ===== DIV 1 ===== -->
+    <div class="div1">
+      <div class="slide_title">
+        <h2>HOW DO YOU FEEL RIGHT NOW?</h2>
+      </div>
+      <div class="btn_frame">
+        <button class="custom-btn btn-1" id="btn-happy" onclick="showDiv2()">
+          HAPPY
+        </button>
+        <button class="custom-btn btn-1" id="btn-sad" onclick="showDiv2()">
+          SAD
+        </button>
+        <button class="custom-btn btn-1" id="btn-anxious" onclick="showDiv2()">
+          ANXIOUS
+        </button>
+        <button class="custom-btn btn-1" id="btn-angry" onclick="showDiv2()">
+          ANGRY
+        </button>
+        <button class="custom-btn btn-1" id="btn-bored" onclick="showDiv2()">
+          BORED
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== DIV 2 ===== -->
+    <div class="div2" id="div2" style="display: none">
+      <div class="slide_title">
+        <h2>HOW <span id="emotion">HAPPY</span> DO YOU FEEL?</h2>
+      </div>
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+      <div class="box-minmax">
+        <span>SLIGHTLY</span><span>NEUTRAL</span><span>VERY</span>
+      </div>
+    </div>
+
+    <!-- ===== DIV 3 ===== -->
+    <div class="div3" id="div3" style="display: none">
+      <div class="slide_title">
+        <h2>WHAT SHOULD YOU DO</h2>
+      </div>
+
+      <div id="progress_title">
+        <p>
+          Lets wait 30 seconds first to calm ourselves before we move on ...
+        </p>
+      </div>
+      <div>
+        <div class="progress" id="progress">
+          <div class="progress-value"></div>
+        </div>
+      </div>
+
+      <!-- ===== HAPPY TEXT ===== -->
+      <div class="texts" id="happy-text" style="display: none">
+        <p>
+          Being happy is a great thing! However it is not just a single term,
+          but rather it refers to a variety of emotions. It can make us feel
+          energetic or feel slow, this could hinder our productivity because we
+          can't slow down our mind in this state. Let us take a break first and
+          calm our mind before moving on with our learning. To do this, we'll
+          play a simple game
+        </p>
+        <button
+          class="custom-btn btn-1"
+          id="play_now"
+          onclick="location.href='/sliderGame.html'"
+        >
+          PLAY NOW
+        </button>
+      </div>
+
+      <!-- ===== SAD TEXT ===== -->
+      <div class="texts" id="sad-text" style="display: none">
+        <p>Sometimes it's okay to be sad, let's look at some quotes that 
+            could cheer you up! you can keep clicking the button to 
+            receive new quotes.
+        </p>
+        <button class="custom-btn show-quote" id="show_quote" onclick="showQuote()">SHOW</button>
+        <span class="texts" id="quotes"></span>
+    </div>
+
+      <!-- ===== ANXIOUS TEXT ===== -->
+      <div class="texts" id="anxious-text" style="display: none">
+        <p>
+          Sometimes it might be helpful to write down exactly what we're going
+          through in a journal. It can be relieving and relaxing and reduce the
+          anxious or depressing thoughts. Write your worries and thoughts here
+          or maybe what you did today, once you are done read it to yourself and
+          see if it helps!
+        </p>
+        <textarea name="journal" rows="20" cols="90">
+            Write how you feel and what's bothering you here. 
+          </textarea
+        >
+      </div>
+
+      <!-- ===== ANGRY TEXT ===== -->
+      <div class="texts" id="angry-text" style="display: none">
+        <p>Being angry makes us feel irritable and agitated, to you it might seem 
+            impossible to calm down right now but why dont we try out a breathing 
+            exercise and see if that could help us relax abit before we continue 
+            with our learning?
+        </p>
+        <button class="custom-btn show-quote" onclick="location.href='/activity4.html'">LET'S BREATHE</button>
+    </div>
+    </div>
+
+    <script>
+      var div2 = document.getElementById("div2");
+      var div3 = document.getElementById("div3");
+
+      var happyBtn = document.getElementById("btn-happy");
+      var sadBtn = document.getElementById("btn-sad");
+      var anxiousBtn = document.getElementById("btn-anxious");
+      var angryBtn = document.getElementById("btn-angry");
+      var boredBtn = document.getElementById("btn-bored");
+
+      const quoteArray = [
+        "They can't hurt you unless you let them",
+        "Tough times don’t last, tough people do.",
+        "It’s hard to beat a person who never gives up.",
+        "Cheer up, buttercup. Storms don’t last forever.",
+        "I’ve never met a strong person with an easy past.",
+        "You are confined only by the walls you build yourself.",
+        "Don’t cry because it’s over, smile because it happened.",
+        "No one can make you feel inferior without your consent.",
+        "Life is not a problem to be solved but a gift to be enjoyed.",
+        "Sweat dries, blood clots, bones heal. Suck it up, princess.",
+        "Sometimes you have to just pick yourself up and carry on.",
+        "Cheer up, the worst is yet to come.",
+        "In the middle of difficulty lies opportunity.",
+        "You carry so much love in your heart. Give some to yourself.",
+        "Go as far as you can see and you will see further.",
+        "Rise and rise again until lambs become lions.",
+        "The sky is everywhere, it begins at your feet.",
+        "Always chase your dreams instead of running from your fears.",
+        "It’s better to have loved and lost than never to have loved at all.",
+        "Do not grieve. Anything you lose comes round in another form.",
+        "Being challenged in life is inevitable, being defeated is optional.",
+        "I will rise up! I will not be defeated! My champion is Jesus Christ.",
+        "You must take life the way it comes at you and make the best of it.",
+        "Don’t be so hard on yourself, okay? You’re doing a really good job.",
+        "If Plan A didn’t work. The alphabet has 25 more letters! Stay cool.",
+        "The best way to cheer yourself up is to try to cheer somebody else up.",
+        "Stop feeling sorry for yourself and you will be happy.",
+        "Every day may not be good. But there is something good in every day.",
+        "Instead of cursing the darkness, light a candle.",
+        "Hardships often prepare ordinary people for an extraordinary destiny.",
+        "You’ll never find a rainbow if you’re looking down.",
+        "You have to fight through some bad days to earn the best days of your life.",
+        "Let your smile change the world. But don’t let the world change your smile.",
+        "Be of good cheer. The future is as bright as your faith.",
+        "The people who are always trying to cheer others up are unhappy themselves.",
+        "If you’ve got nothing to dance about, find a reason to sing.",
+        "I hope you wake up feeling exceptional. You are important, needed, and unique.",
+        "When everything feels like an uphill struggle, just think of the view from the top.",
+        "The best way to cheer yourself is to try to cheer someone else up.",
+        "Hands on your hips, a smile on your lips, spirit in your heart, we’re ready to start!",
+        "What screws us up most in life is the picture in our head of how it’s supposed to be.",
+        "If you are still breathing maybe it is not such a bad day after all.",
+        "Five Ups of life: Buckle up, Start up, Keep it up, Don’t give up, Cheer up.",
+        "Cheer up when the night comes, because mornings always give you another chance.",
+        "Cheer up sweet beautiful girl! You are going to love again, and it will be magnificent.",
+        "You can’t sit and wait for the storm to be over. You have to learn to dance in the rain.",
+        "When I get sad, I stop being sad and start being awesome instead.",
+        "My entire life can be described in one sentence: It didn’t go as planned, and that’s ok.",
+        "Sometimes it takes an overwhelming breakdown to have an undeniable breakthrough.",
+        "Nothing is permanent in this wicked world, not even our troubles.",
+        "Never bend your head. Hold it high. Look the world straight in the eye.",
+        "Keep believing, keep growing. Heaven will be cheering you on today, tomorrow, forever.",
+        "Sometimes breakups aren’t meant for makeups, sometimes they are meant for wake-ups.",
+        "Cheer up, my dear. After every storm comes the sun. Happiness is waiting for you ahead.",
+        "Cheer up. You never know – maybe something awful will happen tomorrow.",
+        "If you really love something set it free. If it comes back it’s yours, if not it wasn’t meant to be.",
+        "Stand up and walk. Move on. After all, you have perfect legs to stand on.",
+        "We are very near the end, but have not and will not lose our good cheer.",
+        "A break up is like a broken mirror. It is better to leave it broken than hurt yourself trying to fix it.",
+        "When it rains, it pours….but soon, the sun shines again. Stay positive. Better days are on their way.",
+        "One of the happiest moments in life is when you find the courage to let go of what you can’t change.",
+        "Life is too short for us to dwell on sadness. Cheer up and live life to the fullest.",
+        "Cheer up, my friend, God doesn’t give us what we can handle. God help us handle what we are given.",
+        "Give it time, relax and don’t let anxiety hold you down with its claws. It can only get better! Cheer up!",
+        "If you look the right way, you can see that the whole world is a garden.",
+        "You don’t always need a plan. Sometimes you just need to breathe, trust, let go and see what happens.",
+        "Giving up on your goal because of one setback is like slashing your other three tires because you got a flat.",
+        "There is always someone better off than you, and there is always someone worse off than you.",
+        "When you don’t see your life moving in right direction, don’t worry take left :). Cheer up and keep walking.",
+        "Two things define you. Your patience when you have nothing, and your attitude when you have everything.",
+        "Whenever you feel sad just remember that there are billions of cells in your body and all they care about is you.",
+      ];
+
+      function showQuote() {
+        var randomNum = Math.floor(Math.random() * quoteArray.length);
+        document.getElementById("quotes").innerHTML = quoteArray[randomNum];
+      }
+
+      happyBtn.addEventListener("click", function () {
+        document.getElementById("emotion").innerHTML = "HAPPY";
+      });
+
+      sadBtn.addEventListener("click", function () {
+        document.getElementById("emotion").innerHTML = "SAD";
+      });
+
+      anxiousBtn.addEventListener("click", function () {
+        document.getElementById("emotion").innerHTML = "ANXIOUS";
+      });
+
+      angryBtn.addEventListener("click", function () {
+        document.getElementById("emotion").innerHTML = "ANGRY";
+      });
+
+      boredBtn.addEventListener("click", function () {
+        document.getElementById("emotion").innerHTML = "BORED";
+      });
+
+      function showDiv2() {
+        div2.style.display = "block";
+      }
+
+      var slider = document.getElementById("myRange");
+      var sliderValue = slider.value;
+
+      slider.oninput = function () {
+        setTimeout(showDiv3, 1000);
+      };
+
+      function showDiv3() {
+        div3.style.display = "block";
+        setTimeout(hideProgressBar, 30000);
+        setTimeout(showText, 30000);
+      }
+
+      function hideProgressBar() {
+        document.getElementById("progress").style.display = "none";
+        document.getElementById("progress_title").style.display = "none";
+      }
+
+      function showText() {
+        if (document.getElementById("emotion").innerHTML == "HAPPY") {
+          document.getElementById("happy-text").style.display = "block";
+        } else if (document.getElementById("emotion").innerHTML == "SAD") {
+          document.getElementById("sad-text").style.display = "block";
+        } else if (document.getElementById("emotion").innerHTML == "ANXIOUS") {
+          document.getElementById("anxious-text").style.display = "block";
+        } else if (document.getElementById("emotion").innerHTML == "ANGRY") {
+          document.getElementById("angry-text").style.display = "block";
+        } else if (document.getElementById("emotion").innerHTML == "BORED") {
+          document.getElementById("bored-text").style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Activities</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/activities.css">
+    <style>
+
+      a {
+        font-weight: 900;
+        color: black;
+      }
+      .centered{
+          position: absolute;
+          top: 10%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-weight: 900;
+          color: black;
+      }
+      #banner {
+        margin: 5%;
+        width: 100%;
+        height: auto;
+      }
+      #imageGallery {
+        overflow: hidden;
+        margin: 10px;
+      }
+      .box {
+        float: left;
+        position: relative;
+        width: 20%;
+        padding-bottom: 20%;
+				
+      }
+      .boxInner {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 10px;
+        bottom: 10px;
+        overflow: hidden;
+      }
+      .boxInner img {
+        width: 100%;
+      }
+      .boxInner .titleBox {
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: -50px;
+        background: #000;
+        background: rgba(0, 0, 0, 0.5);
+        color: #FFF;
+        padding: 10px;
+        text-align: center;
+      }
+      @media only screen and (max-width : 480px) {
+        /* Smartphone view: 1 tile */
+        .box {
+          width: 100%;
+          padding-bottom: 100%;
+        }
+      }
+      @media only screen and (max-width : 650px) and (min-width : 481px) {
+        /* Tablet view: 2 tiles */
+        .box {
+          width: 50%;
+          padding-bottom: 50%;
+        }
+      }
+      @media only screen and (max-width : 1050px) and (min-width : 651px) {
+        /* Small desktop / ipad view: 3 tiles */
+        .box {
+          width: 33.3%;
+          padding-bottom: 33.3%;
+        }
+      }
+      @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+        /* Medium desktop: 4 tiles */
+        .box {
+          width: 25%;
+          padding-bottom: 25%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo"><img class="Logo" src="img/logo.png"></a>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+                    <li class="nav__item"><a href="activities.html" class="nav__link">Activities</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--
+        Adapted from: http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/
+      -->
+    <div id="content">
+
+
+      <div id="imageGallery">
+        <div id="banner">
+            <!-- <img src="http://dummyimage.com/1100x350/aabbcc/000000"/> -->
+          </div>
+
+          <div class="box">
+            <div class="boxInner">
+              <a href="think.html"><img src="img/brain.png"></a>
+              <div class="centered"><a href="think.html">THINK</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="boxInner">
+              <a href="activity6.html"><img src="img/emoji.png"></a>
+              <div class="centered"><a href="activity6.html">Emotions</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="boxInner">
+              <a href="activity3.html"><img src="img/pencil.png"></a>
+              <div class="centered"><a href="activity3.html">Expression</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="boxInner">
+              <a href="activity4.html"><img src="img/breathing.gif"></a>
+              <div class="centered"><a href="activity4.html">Breathing</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="boxInner">
+              <a href="activity5.html"><img src="img/memory.jpg"></a>
+              <div class="centered"><a href="activity5.html">Memory</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="boxInner">
+              <a href="funQuiz.html"><img src="img/quiz.jpg"></a>
+              <div class="centered"><a href="funQuiz.html">Fun Quiz</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="boxInner">
+              <a href="ColoringBook.html"><img src="img/book.jpg"></a>
+              <div class="centered"><a href="ColoringBook.html">Coloring Book</a></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="boxInner">
+              <a href="333.html"><img src="img/beach.jpg"></a>
+              <div class="centered"><a href="333.html">333</a></div>
+            </div>
+          </div>
+        <div class="box">
+          <div class="boxInner">
+            <img src="img/Motivation.jpg">
+            <div class="centered"><a href="activity7.html">Motivation</a></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img src="img/mood.jpg">
+            <div class="centered"><a href="moodBoost.html">Mood Boost</a></div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        /*<![CDATA[*/
+        $(document).ready(function() {
+
+
+        });
+        /*]]>*/
+    </script>
+
+  </body>
+</html>

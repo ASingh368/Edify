@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html onclick="myFunction()">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+       
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="css/activity7.css">
+
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo"><img class="Logo" src="img/logo.png"></a>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+                        <li class="nav__item"><a href="activities.html" class="nav__link">Activities</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+  <body onload="startTime(); startDate()">
+    <div class="container">
+      <div id="date"></div>
+      <div id="display"></div>
+      <div id="content">
+        <p id="quote">"Always believe that something is wonderful is about to happen" <br/></p>
+      </div>
+    </div>
+    <div id="b-nav">
+      <ul>
+        <button id="gen" onclick="genQuote()">New Quote</button>
+        <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=the%20people%20who%20are%20crazy%20enough%20to%20think%20they%20can%20change%20the%20world%20are%20the%20ones%20who%20do.%20-%20Steve%20Jobs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </ul>
+    </div>
+
+    <script src="js/activity7.js"> </script>
+    </body>
+    </html>
+
+ 
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <img class="logo" src="img/logo.png" />
+          <h3>Create Account</h3>
+          <input type="text" placeholder="Name" id="name" />
+          <input type="email" placeholder="Email" id="signUpEmail" />
+          <input type="password" placeholder="Password" id="signUpPassword" />
+          <button id="signUpBtn" onclick="signupUser()">Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <img class="logo" src="img/logo.png" />
+          <input type="email" placeholder="Email" id="signInEmail" />
+          <input type="password" placeholder="Password" id="signInPassword" />
+          <a href="#" id="forgotPassword">Forgot your password?</a>
+          <button id="signInBtn" onclick="signinUser()">Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>To keep connected with us please login.</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello!</h1>
+            <p>Start your journey with us.</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p></p>
+    </footer>
+
+    <!--===== FIREBASE JS =====-->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyC9oZVhzzu28_NMacFhQ4AC-b3tUeNEI18",
+        authDomain: "edify-project-bcit.firebaseapp.com",
+        projectId: "edify-project-bcit",
+        storageBucket: "edify-project-bcit.appspot.com",
+        messagingSenderId: "423465985507",
+        appId: "1:423465985507:web:5e4b1c8f7b77d911006cd6",
+        measurementId: "G-1WK5MEF65H",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      //firestore tool sdk references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

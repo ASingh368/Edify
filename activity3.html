@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="css/activity3.css">
+
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo"><img class="Logo" src="img/logo.png"></a>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+                        <li class="nav__item"><a href="activities.html" class="nav__link">Activities</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div id="sketch">
+          <canvas id="paint"></canvas>
+        </div>
+        
+        <div id="settings"> Colours
+          <button onclick="getColor('blue');">Blue</button>
+          <button onclick="getColor('red');">Red</button>
+          <button onclick="getColor('green');">Green</button>
+          <button onclick="getColor('white');">White</button>
+          <button onclick="getColor('#333333');">Eraser</button>
+        </div>
+        
+        <div id="settings"> Brush Size
+          <button onclick="getSize('2');">Small</button>
+          <button onclick="getSize('5');">Med</button>
+          <button onclick="getSize('10');">Large</button>
+          <button onclick="getSize('20');">X Large</button>
+        </div>
+
+
+        
+        <!--===== MAIN JS =====-->
+        <script src="js/activity3.js"></script>
+
+    </body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="css/funQuiz.css">
+
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo"><img class="Logo" src="img/logo.png"></a>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+                        <li class="nav__item"><a href="activities.html" class="nav__link">Activities</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+            <h1 id="heading">QUIZ TIME</h1>
+        <div class ="float-container">
+        <form class = "float-child1" name = "quiz">
+
+
+            <p class = "questions">What is the capital of Canada?</p>
+            <input id = "textbox" type = "text" name = "question1">
+            
+            <p class = "questions">What is the capital of British Columbia?</p>
+            <input type = "radio" id = "mc" name = "question2" value = "Victoria"> Victoria<br>
+            <input type = "radio" id = "mc" name = "question2" value = "Vancouver"> Vancouver<br>
+            
+            <p class = "questions">What is the capital of Ontario?</p>
+            
+            <input type = "radio" id = "mc" name = "question3" value = "Toronto">Toronto <br>
+            <input type = "radio" id = "mc" name = "question3" value = "Ottawa"> Ottawa<br>
+            
+            
+            <input id = "button" type = "button" value = "I'm finished!" onclick = "check();">
+            
+            
+            </form>
+            
+            <div class = "float-child2" id="after_submit">
+            <p id = "number_correct"></p>
+            <p id = "message"></p>
+            <img id = "picture">
+            </div>
+            </div>
+	
+
+	<!--Only one script needed :-D -->
+	<script src="js/funQuiz.js"> </script>
+    </body>
+    </html>
+
+ 
+
