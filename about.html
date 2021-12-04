@@ -1,79 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =====BOX ICONS===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-        <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="css/index.css">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/index.css" />
 
-        <title>About Us</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo"><img class="Logo" src="img/logo.png"></a>
-                </div>
-                
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
+    <title>About Us</title>
+  </head>
+  <body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          <a href="#" class="nav__logo"
+            ><img class="Logo" src="img/logo.png"
+          /></a>
+        </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <div class="nav__close" id="nav-close">
-                        <i class='bx bx-x'></i>
-                    </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
 
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
-                        <li class="nav__item"><a href="About.html" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
-                        <li class="nav__item"><a href="activities.html" class="nav__link">Activities</a></li>
-                    </ul>
-                </div>                
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home" id="home">
-                <div class="home__container bd-grid">                            
-                    <div class="home__img">
-                     
-                        <img src="img/about.png" alt="" data-speed="-2" style="width: 50%" class="move">
-                    </div>           
-                  
-                    <div class="home__data">
-                    
-                        <p class="home__description">Feel free to reach out <br>and contact us to see if we can help.</p> 
-<div style="width: 100%;">
-      <div style="width: 50%; float: left;">
-      <img src="img/user.png" class=nav__logo  style="border-radius: 50%">
-        <h2 class="home__description" >Priya</h2>
-        <p class="home__description">CEO & Founder</p>
-        <p class="home__description">Founder and Lead of Edify Learning Spaces<br>priya@edifylearningspaces.com</p>
-        <p><a href="mailto:priya@edifylearningspaces.com"><button class="home__button">Contact</button></a></p>
+        <div class="nav__menu" id="nav-menu-user" style="display: none">
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x"></i>
           </div>
-  </div>
 
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="resources.html" class="nav__link">Resources</a>
+            </li>
+            <li class="nav__item">
+              <a href="activities.html" class="nav__link">Activities</a>
+            </li>
+            <li class="nav__item">
+              <button class="nav__link" id="logout-btn" onclick="logoutUser()">
+                Log Out
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__menu" id="nav-menu" style="display: block">
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x"></i>
           </div>
-  </div>
 
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="resources.html" class="nav__link">Resources</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-                
-<footer></footer>
+    <main class="l-main">
+      <!--===== HOME =====-->
+      <section class="home" id="home">
+        <div class="home__container bd-grid">
+          <div class="home__img">
+            <img
+              src="img/about.png"
+              alt=""
+              data-speed="-2"
+              style="width: 50%"
+              class="move"
+            />
+          </div>
 
-            </section>
-        </main>
+          <div class="home__data">
+            <p class="home__description">
+              Feel free to reach out <br />and contact us to see if we can help.
+            </p>
+            <div style="width: 100%">
+              <div style="width: 50%; float: left">
+                <img
+                  src="img/user.png"
+                  class="nav__logo"
+                  style="border-radius: 50%"
+                />
+                <h2 class="home__description">Priya</h2>
+                <p class="home__description">CEO & Founder</p>
+                <p class="home__description">
+                  Founder and Lead of Edify Learning Spaces<br />priya@edifylearningspaces.com
+                </p>
+                <p>
+                  <a href="mailto:priya@edifylearningspaces.com"
+                    ><button class="home__button">Contact</button></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <!--===== GSAP =====-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!--===== GSAP =====-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
-        <!--===== MAIN JS =====-->
-        <script src="js/index.js"></script>
-    </body>
+    <!--===== FIREBASE JS =====-->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyC9oZVhzzu28_NMacFhQ4AC-b3tUeNEI18",
+        authDomain: "edify-project-bcit.firebaseapp.com",
+        projectId: "edify-project-bcit",
+        storageBucket: "edify-project-bcit.appspot.com",
+        messagingSenderId: "423465985507",
+        appId: "1:423465985507:web:5e4b1c8f7b77d911006cd6",
+        measurementId: "G-1WK5MEF65H",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+          var uid = user.uid;
+          document.getElementById("nav-menu-user").style.display = "block";
+          document.getElementById("nav-menu").style.display = "none";
+
+          // ...
+        } else {
+          // User is signed out
+          // ...
+        }
+      });
+
+      document
+        .getElementById("logout-btn")
+        .addEventListener("click", logoutUser);
+
+      function logoutUser() {
+        firebase
+          .auth()
+          .signOut()
+          .then(() => {
+            window.location = "/index.html";
+          })
+          .catch((error) => {
+            // An error happened.
+          });
+      }
+    </script>
+    <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>

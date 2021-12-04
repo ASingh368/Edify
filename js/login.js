@@ -14,26 +14,15 @@ signInButton.addEventListener("click", () => {
   container.classList.add("right-panel-active .sign-in-container");
 });
 
-
-firebase.auth().onAuthStateChanged((user) => {
-	if (user) {
-	  // User is signed in, see docs for a list of available properties
-	  // https://firebase.google.com/docs/reference/js/firebase.User
-	  var uid = user.uid;
-	  window.location = "/activities.html";
-	  // ...
-	} 
-  });
-
-
 //sign-up for new users
 //email & password are stored in user-database
 function signupUser() {
-//   e.preventDefault();
+  //   e.preventDefault();
   const email = document.getElementById("signUpEmail").value;
   const password = document.getElementById("signUpPassword").value;
 
-  auth
+  firebase
+    .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Signed in
@@ -52,15 +41,17 @@ function signupUser() {
 
 //sign-in for existing users
 function signinUser() {
-  const signInEmail = document.getElementById("signInEmail");
-  const signInPassword = document.getElementById("signInPassword");
+  const signInEmail = document.getElementById("signInEmail").value;
+  const signInPassword = document.getElementById("signInPassword").value;
 
-  auth
+  firebase
+    .auth()
     .signInWithEmailAndPassword(signInEmail, signInPassword)
     .then((userCredential) => {
       // Signed in
+
       var user = userCredential.user;
-	  window.location = "/activities.html";
+      window.location = "/activities.html";
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -71,7 +62,8 @@ function signinUser() {
 forgotPassword.addEventListener("click", (e) => {
   const signInEmail = document.getElementById("signInEmail");
 
-  auth
+  firebase
+    .auth()
     .sendPasswordResentEmail(signInEmail)
     .then(() => {
       console.log("password reset email sent");

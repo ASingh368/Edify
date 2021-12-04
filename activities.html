@@ -2,21 +2,20 @@
 <html lang="en">
   <head>
     <title>Activities</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="css/activities.css">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/activities.css" />
     <style>
-
       a {
         font-weight: 900;
         color: black;
       }
-      .centered{
-          position: absolute;
-          top: 10%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-weight: 900;
-          color: black;
+      .centered {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 900;
+        color: black;
       }
       #banner {
         margin: 5%;
@@ -32,7 +31,6 @@
         position: relative;
         width: 20%;
         padding-bottom: 20%;
-				
       }
       .boxInner {
         position: absolute;
@@ -46,39 +44,38 @@
         width: 100%;
       }
       .boxInner .titleBox {
-
         bottom: 0;
         left: 0;
         right: 0;
         margin-bottom: -50px;
         background: #000;
         background: rgba(0, 0, 0, 0.5);
-        color: #FFF;
+        color: #fff;
         padding: 10px;
         text-align: center;
       }
-      @media only screen and (max-width : 480px) {
+      @media only screen and (max-width: 480px) {
         /* Smartphone view: 1 tile */
         .box {
           width: 100%;
           padding-bottom: 100%;
         }
       }
-      @media only screen and (max-width : 650px) and (min-width : 481px) {
+      @media only screen and (max-width: 650px) and (min-width: 481px) {
         /* Tablet view: 2 tiles */
         .box {
           width: 50%;
           padding-bottom: 50%;
         }
       }
-      @media only screen and (max-width : 1050px) and (min-width : 651px) {
+      @media only screen and (max-width: 1050px) and (min-width: 651px) {
         /* Small desktop / ipad view: 3 tiles */
         .box {
           width: 33.3%;
           padding-bottom: 33.3%;
         }
       }
-      @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+      @media only screen and (max-width: 1290px) and (min-width: 1051px) {
         /* Medium desktop: 4 tiles */
         .box {
           width: 25%;
@@ -89,116 +86,190 @@
   </head>
   <body>
     <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo"><img class="Logo" src="img/logo.png"></a>
-            </div>
-            
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
+      <nav class="nav bd-grid">
+        <div>
+          <a href="#" class="nav__logo"
+            ><img class="Logo" src="img/logo.png"
+          /></a>
+        </div>
 
-            <div class="nav__menu" id="nav-menu">
-                <div class="nav__close" id="nav-close">
-                    <i class='bx bx-x'></i>
-                </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
 
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
-                    <li class="nav__item"><a href="activities.html" class="nav__link">Activities</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x"></i>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="resources.html" class="nav__link">Resources</a>
+            </li>
+            <li class="nav__item">
+              <a href="activities.html" class="nav__link">Activities</a>
+            </li>
+            <li class="nav__item">
+              <button
+                class="nav__link"
+                id="logout-btn"
+                display="none"
+                onclick="logoutUser()"
+              >
+                Log Out
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <!--
         Adapted from: http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/
       -->
     <div id="content">
-
-
       <div id="imageGallery">
-        <div id="banner">
-            <!-- <img src="http://dummyimage.com/1100x350/aabbcc/000000"/> -->
-          </div>
-
-          <div class="box">
-            <div class="boxInner">
-              <a href="think.html"><img src="img/brain.png"></a>
-              <div class="centered"><a href="think.html">THINK</a></div>
-            </div>
-          </div>
-          <div class="box">
-            <div class="boxInner">
-              <a href="activity6.html"><img src="img/emoji.png"></a>
-              <div class="centered"><a href="activity6.html">Emotions</a></div>
-            </div>
-          </div>
-          <div class="box">
-            <div class="boxInner">
-              <a href="activity3.html"><img src="img/pencil.png"></a>
-              <div class="centered"><a href="activity3.html">Expression</a></div>
-            </div>
-          </div>
-          <div class="box">
-            <div class="boxInner">
-              <a href="activity4.html"><img src="img/breathing.gif"></a>
-              <div class="centered"><a href="activity4.html">Breathing</a></div>
-            </div>
-          </div>
-          <div class="box">
-            <div class="boxInner">
-              <a href="activity5.html"><img src="img/memory.jpg"></a>
-              <div class="centered"><a href="activity5.html">Memory</a></div>
-            </div>
-          </div>
-          <div class="box">
-            <div class="boxInner">
-              <a href="funQuiz.html"><img src="img/quiz.jpg"></a>
-              <div class="centered"><a href="funQuiz.html">Fun Quiz</a></div>
-            </div>
-          </div>
-          <div class="box">
-            <div class="boxInner">
-              <a href="coloringbook.html"><img src="img/book.jpg"></a>
-              <div class="centered"><a href="coloringbook.html">Coloring Book</a></div>
-            </div>
-          </div>
-          <div class="box">
-            <div class="boxInner">
-              <a href="333.html"><img src="img/beach.jpg"></a>
-              <div class="centered"><a href="333.html">333</a></div>
-            </div>
-          </div>
-        <div class="box">
-          <div class="boxInner">
-            <a href="activity7.html"><img src="img/Motivation.jpg"></a>
-            <div class="centered"><a href="activity7.html">Motivation</a></div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="boxInner">
-		  <a href="moodBoost.html"><img src="img/mood.jpg"></a>
-            <div class="centered"><a href="moodBoost.html">Mood Boost</a></div>
-          </div>
-        </div>
-
-
-
+       
+        <article class="leaderboard">
+      
+          <main class="leaderboard__profiles">
+            <article class="leaderboard__profile" id="thinkLink">
+              <img src="img/brain.png" class="leaderboard__picture">
+              <span class="leaderboard__name">THINK</span>
+            </article>
+            
+            <article class="leaderboard__profile" id="emotionLink">
+              <img src="img/emoji.png" class="leaderboard__picture">
+              <span class="leaderboard__name">EMOTIONS</span>
+            </article>
+            
+            <article class="leaderboard__profile" id="expressionLink">
+              <img src="img/pencil.png" class="leaderboard__picture">
+              <span class="leaderboard__name">EXPRESSION</span>
+            </article>
+            
+            <article class="leaderboard__profile" id="breathingLink">
+              <img src="img/breathing.gif" class="leaderboard__picture">
+              <span class="leaderboard__name">BREATHING</span>
+            </article>
+    
+            <article class="leaderboard__profile" id="memoryLink">
+              <img src="img/memory.jpg" class="leaderboard__picture">
+              <span class="leaderboard__name">MEMORY</span>
+            </article>
+    
+           <article class="leaderboard__profile" id="quizLink">
+              <img src="img/quiz.jpg" class="leaderboard__picture">
+              <span class="leaderboard__name">FUN QUIZ</span>
+            </article>
+    
+            <article class="leaderboard__profile" id="bookLink">
+              <img src="img/book.jpg" class="leaderboard__picture">
+              <span class="leaderboard__name">COLORING BOOK</span>
+            </article>
+    
+            <article class="leaderboard__profile" id="333Link">
+              <img src="img/beach.jpg" class="leaderboard__picture">
+              <span class="leaderboard__name">3-3-3 TECHNIQUE</span>
+            </article>
+    
+            <article class="leaderboard__profile" id="motivationLink">
+              <img src="img/Motivation.jpg" class="leaderboard__picture">
+              <span class="leaderboard__name">MOTIVATION</span>
+            </article>
+    
+            <article class="leaderboard__profile" id="moodLink">
+              <img src="img/mood.jpg" class="leaderboard__picture">
+              <span class="leaderboard__name">MOOD BOOST</span>
+            </article>
+        
       </div>
-
     </div>
 
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!--===== FIREBASE JS =====-->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
     <script>
-        /*<![CDATA[*/
-        $(document).ready(function() {
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyC9oZVhzzu28_NMacFhQ4AC-b3tUeNEI18",
+        authDomain: "edify-project-bcit.firebaseapp.com",
+        projectId: "edify-project-bcit",
+        storageBucket: "edify-project-bcit.appspot.com",
+        messagingSenderId: "423465985507",
+        appId: "1:423465985507:web:5e4b1c8f7b77d911006cd6",
+        measurementId: "G-1WK5MEF65H",
+      };
+      firebase.initializeApp(firebaseConfig);
 
+      //firestore tool sdk references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
 
-        });
-        /*]]>*/
+      db.settings({ timestampsInSnapshots: true });
     </script>
+    <script>
+      document
+        .getElementById("logout-btn")
+        .addEventListener("click", logoutUser);
 
+      function logoutUser() {
+        auth
+          .signOut()
+          .then(() => {
+            window.location = "/index.html";
+          })
+          .catch((error) => {
+            // An error happened.
+          });
+      }
+
+      document.getElementById("thinkLink").addEventListener("click", function() {
+        window.location = "/think.html";
+      });
+
+      document.getElementById("emotionLink").addEventListener("click", function() {
+        window.location = "/activity6.html";
+      });
+
+      document.getElementById("expressionLink").addEventListener("click", function() {
+        window.location = "/activity3.html";
+      });
+
+      document.getElementById("breathingLink").addEventListener("click", function() {
+        window.location = "/activity4.html";
+      });
+
+      document.getElementById("memoryLink").addEventListener("click", function() {
+        window.location = "/activity5.html";
+      });
+
+      document.getElementById("quizLink").addEventListener("click", function() {
+        window.location = "/funQuiz.html";
+      });
+
+      document.getElementById("bookLink").addEventListener("click", function() {
+        window.location = "/coloringbook.html";
+      });
+
+      document.getElementById("333Link").addEventListener("click", function() {
+        window.location = "/333.html";
+      });
+
+      document.getElementById("motivationLink").addEventListener("click", function() {
+        window.location = "/activity7.html";
+      });
+
+      document.getElementById("moodLink").addEventListener("click", function() {
+        window.location = "/moodBoost.html";
+      });
+    </script>
   </body>
 </html>
